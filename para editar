@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geração Eleita</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS básico para o layout do site */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('Logo GE') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Estilo do cabeçalho e do menu de navegação */
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgba(68, 68, 68, 0.8);
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(85, 85, 85, 0.8);
+        }
+
+        /* Estilo do conteúdo principal */
+        main {
+            padding: 20px;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        /* Estilo para a seção de fotos */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery-item {
+            width: calc(33.333% - 20px);
+            margin-bottom: 20px;
+        }
+
+        .gallery-item img, .gallery-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item .caption {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilo adicional para o formulário */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-group button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Geração Eleita</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home" class="menu-link" data-target="home">Home</a></li>
+            <li><a href="#palavra-do-dia" class="menu-link" data-target="palavra-do-dia">Palavra do Dia</a></li>
+            <li><a href="#nossas-fotos" class="menu-link" data-target="nossas-fotos">Nossas Fotos</a></li>
+            <li><a href="#Programações" class="menu-link" data-target="Programações">Programações</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="home" class="content active">
+            <h2>Bem-vindo ao Site do Geração Eleita</h2>
+            <p>Aqui vamos estar mostrando todos os assuntos referentes ao conjunto Geração Eleita, da Igreja Assembléia de Deus ministério Criação de Deus. Nosso Pastor Presidente é o Clóvis de Carvalho Bassani</p>
+        </div>
+        <div id="palavra-do-dia" class="content">
+            <h2>Palavra do Dia</h2>
+            <p>Nós preparamos para todos a palavra do dia, por favor clique em gerar no botão abaixo e receba o que o Senhor preparou para hoje.</p>
+            <div class="form-group">
+                <label for="versiculo">Versículo</label>
+                <textarea id="versiculo" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <button id="gerar-versiculo">Gerar Versículo</button>
+                <button id="enviar-whatsapp">Deseja enviar para o WhatsApp?</button>
+            </div>
+        </div>
+        <div id="nossas-fotos" class="content">
+            <h2>Nossas Fotos</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="foto1.jpg" alt="Foto 1">
+                    <div class="caption">Legenda da Foto 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="foto2.jpg" alt="Foto 2">
+                    <div class="caption">Legenda da Foto 2</div>
+                </div>
+                <div class="gallery-item">
+                    <video controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                    <div class="caption">Legenda do Vídeo 1</div>
+                </div>
+                <!-- Adicione mais fotos e vídeos conforme necessário -->
+            </div>
+        </div>
+        <div id="Programações" class="content">
+            <h2>Programações</h2>
+            <p>Nosso ensaio é toda Segunda-Feira, as 19:30.</p>
+            <p>Todo primeiro domingo do mês, certamente no dia da Ceia pela manhã as 08:00, nós temos a consagração com a direção dos Jovens, todos estão convidados.</p>
+            <p>A cada 15 dias, temos um estudo biblico na quinta-feira, as 19:30.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="social-link">
+            <a href="https://instagram.com/seu_perfil" target="_blank">
+                <img src="instagram.jpeg" alt="Instagram" class="social-logo" style="width: 30px; height: 30px;">
+                Siga-nos no Instagram
+            </a>
+        </div>
+    </footer>
+    <script>
+        // JavaScript para navegação
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(this.dataset.target).classList.add('active');
+            });
+        });
+
+        // Array de versículos para geração
+        const versiculos = [
+            "Versículo 1: Exemplo de texto do versículo.",
+            "Versículo 2: Exemplo de texto do versículo.",
+            "Versículo 3: Exemplo de texto do versículo."
+            // Adicione mais versículos conforme necessário
+        ];
+
+        // Função para gerar um versículo aleatório
+        document.getElementById('gerar-versiculo').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * versiculos.length);
+            document.getElementById('versiculo').value = versiculos[randomIndex];
+        });
+
+        // Função para enviar o versículo para o WhatsApp
+        document.getElementById('enviar-whatsapp').addEventListener('click', () => {
+            const versiculo = document.getElementById('versiculo').value;
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(versiculo)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
